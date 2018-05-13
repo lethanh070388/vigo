@@ -10,7 +10,7 @@ html
         link(rel="stylesheet" href="../css/style.css")
     body
         //- navigation bar
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.scrolling-navbar
             .container
                 a.navbar-brand(href="#")
                     img.logo(src="../assets/logo.png")
@@ -27,22 +27,22 @@ html
                         
 
                     ul.navbar-nav.ml-auto
-                        -const menuItems = ["Home","About","Services","Promotion","Blog","Contact"];
+                        -const menuItems = ["home","about","services","promotion","blog","contact"];
                         each n,i in menuItems
                             if i==0
                                 li.nav-item.active
-                                    a.nav-link(href="#")= n
+                                    a.nav-link(href="index.html")= n
                                         span.sr-only (current)
                             else
                                 li.nav-item
-                                    a.nav-link(href="#")= n
+                                    a.nav-link(href=""+n+".html")= n
         //- end navigation bar
         block content
 
         //- footer-top
         .container-fluid.bg-dark
             .container
-                .row
+                .row.pb-4
                     .col-md-4
                         h1.my-4.text-white About us
                         div.address.text-white
@@ -88,12 +88,18 @@ html
                                 .form-group
                                     input#inputNameFooter.form-control(type="text" placeholder="Your name...")
                                 .input-group
-                                    input#inputEmailFooter.form-control(type="email" placeholder="Your email")
+                                    input#inputEmailFooter.form-control(type="email" placeholder="Your email...")
                                     .input-group-append
                                         button.btn.btn-outline-secondary(type="button")
                                             i.fas.fa-arrow-right
-        //- footer-bottom
+        //- footer bottom        
+        .container
+            .row
+                .col
+                    .text-center.py-2 &#64; Copyright 2017 ViGO. All rights reserved.
+
 
         script(src="../js/jquery.js")
         script(src="../js/popper.js")
         script(src="../js/bootstrap.js")
+        script(src="../js/custom.js")

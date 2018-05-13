@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light scrolling-navbar">
       <div class="container"><a class="navbar-brand" href="#"><img class="logo" src="../assets/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -23,19 +23,19 @@
             </div>
           </form>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Promotion</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item active"><a class="nav-link" href="index.html">home<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">services</a></li>
+            <li class="nav-item"><a class="nav-link" href="promotion.html">promotion</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container-fluid bg-dark">
       <div class="container">
-        <div class="row">
+        <div class="row pb-4">
           <div class="col-md-4">
             <h1 class="my-4 text-white">About us</h1>
             <div class="address text-white">
@@ -71,7 +71,7 @@
                   <input class="form-control" id="inputNameFooter" type="text" placeholder="Your name...">
                 </div>
                 <div class="input-group">
-                  <input class="form-control" id="inputEmailFooter" type="email" placeholder="Your email">
+                  <input class="form-control" id="inputEmailFooter" type="email" placeholder="Your email...">
                   <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button"><i class="fas fa-arrow-right"></i></button>
                   </div>
@@ -82,8 +82,16 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="text-center py-2">&#64; Copyright 2017 ViGO. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
     <script src="../js/jquery.js"></script>
     <script src="../js/popper.js"></script>
     <script src="../js/bootstrap.js"></script>
+    <script src="../js/custom.js"></script>
   </body>
 </html>

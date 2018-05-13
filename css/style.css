@@ -2,7 +2,8 @@
 body {
   font-family: Roboto, sans-serif;
   color: #31302f;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 16px; }
 
 .clearfix:after {
   content: "";
@@ -13,8 +14,11 @@ img {
   display: block;
   width: 100%; }
 
+h1 {
+  font-size: 40px; }
+
 h3 {
-  font-size: 1.3rem;
+  font-size: 20.8px;
   font-weight: 500; }
 
 p {
@@ -23,9 +27,21 @@ p {
 .pb-25 {
   padding-bottom: 50% !important; }
 
+@media (min-width: 576px) {
+  .pb-25 {
+    padding-bottom: 25% !important; }
+
+  .pb-sm-25 {
+    padding-bottom: 25% !important; } }
 @media (min-width: 768px) {
   .pb-25 {
     padding-bottom: 25% !important; } }
+@media (min-width: 992px) {
+  .pb-25 {
+    padding-bottom: 25% !important; }
+
+  .pb-lg-100 {
+    padding-bottom: 100% !important; } }
 .pb-50 {
   padding-bottom: 50% !important; }
 
@@ -69,13 +85,22 @@ td {
 
 .logo {
   max-width: 120px; }
+  .logo_inline {
+    display: inline-block;
+    padding: 3px;
+    vertical-align: top;
+    margin: 0 10px; }
 
 .navbar-light .navbar-nav .active > .nav-link {
   color: #00b9af; }
 .navbar-light .navbar-nav .nav-link {
-  color: #31302f; }
+  color: #31302f;
+  text-transform: capitalize; }
   .navbar-light .navbar-nav .nav-link:hover {
     color: #00b9af; }
+
+.scrolling-navbar {
+  transition: all 0.5s ease; }
 
 .carousel {
   height: 100vh;
@@ -131,7 +156,8 @@ td {
   position: relative;
   width: 80px;
   height: 80px;
-  background-color: #00b9af; }
+  background-color: #00b9af;
+  border-radius: 10px; }
 .testimonial_inner {
   background-color: #fff;
   border: 2px solid #575757;
@@ -156,7 +182,7 @@ td {
     position: absolute;
     top: 21px; }
 .testimonial_title {
-  border-bottom: 2px solid #575757; }
+  border-bottom: 1px solid #575757; }
 .testimonial_sign {
   font-style: italic;
   padding-right: 1.5rem;
@@ -172,5 +198,28 @@ td {
   line-height: 50px;
   border-radius: 50%;
   margin-right: 10px; }
+
+@media (max-width: 767px) {
+  body {
+    font-size: 12.8px; }
+
+  h1 {
+    font-size: 32px; }
+
+  h3 {
+    font-size: 16.64px; }
+
+  .carousel {
+    height: auto; }
+
+  .testimonial_sign {
+    font-size: 10.4px; }
+
+  .event .event-date_day {
+    font-size: 20.8px; }
+  .event .event-date_month {
+    font-size: 16px; }
+  .event .event-content .event-author {
+    font-size: 11.7px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -32,11 +32,11 @@ block content
         .row.mb-4
             -const places = [{name:"Da Nang",price:235},{name:"Ha Noi",price:235},{name:"Sapa",price:235},{name:"HCM",price:235},{name:"Ha Long",price:235},{name:"Da Lat",price:235},{name:"Hoi An",price:235},{name:"Quang Binh",price:235}];
             each n in places
-                .col-sm-6.col-md-4.col-lg-3
+                .col-sm-6.col-md-3
                     .mycard.mb-4
                         .info.d-flex.align-items-center.justify-content-center.flex-column
                             h3= n.name
-                            button.btn.btn-primary.btn-lg.btn-price(type="button")= n.price | $
+                            button.btn.btn-primary.btn-lg.btn-price(type="button")= n.price + "$"
     //- end recent places
 
     //- calendar
@@ -67,7 +67,7 @@ block content
                 h1.my-4.text-center Hot Promotion
                 p.mb-4.text-center Check out the best places &#38; events in the city. Each one is worth of visiting. Experience which you never forget.
         .row
-            .col-md-8
+            .col-lg-8
                 .row
                     .col
                         .mycard.pb-25.mb-4
@@ -92,8 +92,8 @@ block content
                                     |HUE FESTIVAL SPECIALS
                                     br
                                     |15% OFF10
-            .col-md-4.d-flex
-                .mycard.mb-4
+            .col-lg-4.d-flex
+                .mycard.mb-4.pb-sm-25.pb-lg-100
                     .info.d-flex.align-items-center.justify-content-center.flex-column
                         h3 
                             |BUY 1 TOUR,
@@ -112,7 +112,7 @@ block content
                         .testimonial.clearfix.py-4
                             .testimonial_image
                             .testimonial_inner
-                                h3.testimonial_title.py-4 Exactly what i need
+                                h3.testimonial_title.pb-4.pt-2 Exactly what i need
                                 p.testimonial_content.pt-4 Oh, all right, I am. But if anything happens to me, tell them I died robbing some old man. Calculon is gonna kill us and it's a...  
                                 .testimonial_sign 
                                     |- 
@@ -136,9 +136,9 @@ block content
                         .form-group
                             input#inputName.form-control.my-form-control(type="text" placeholder="Your name...")
                         .form-group
-                            input#inputPhone.form-control.my-form-control(type="text" placeholder="Your phone")
+                            input#inputPhone.form-control.my-form-control(type="text" placeholder="Your phone...")
                         .form-group
-                            input#inputEmail.form-control.my-form-control(type="email" placeholder="Your email")
+                            input#inputEmail.form-control.my-form-control(type="email" placeholder="Your email...")
                     .col-sm-6
                         .form-group
                             textarea#formControlTextarea.form-control(rows="6")
