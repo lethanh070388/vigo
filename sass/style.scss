@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700');
+@import 'variable';
+
+body{
+    font-family: Roboto, sans-serif;
+    color: $cl-black;
+    font-weight: 300;
+}
+// BASE
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+img{
+    display: block;
+    width: 100%;
+}
+h3{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+p{
+    margin-bottom: 0.5rem;
+}
+.pb-25{
+    padding-bottom: 50% !important;
+}
+@media (min-width: 768px){
+    .pb-25{
+        padding-bottom: 25% !important;
+    }
+}
+.pb-50{
+    padding-bottom: 50% !important;
+}
+
+.bg-grey{
+    background-color: $cl-grey;
+}
+.bg-blue{
+    background-color: $cl-primary;
+}
+.bg-dark{
+    background-color: $cl-light-black;
+}
+b,strong{
+    font-weight: 700;
+}
+td {
+    vertical-align: text-top;
+    padding-right: 10px;
+}
+// END BASE
+
+// COMPONENTS
+
+// BUTTON
+.btn-primary {
+    color: $cl-white;
+    background-color: $cl-primary;
+    border-color: $cl-primary;
+    min-width: 100px;
+    &:hover{
+        background-color: $cl-primary;
+        border-color: $cl-primary;
+    }
+}
+.btn-secondary {
+    color: $cl-black;
+    background-color: $cl-white;
+    border-color: $cl-white;
+    min-width: 100px;
+    &:hover{
+        background-color: $cl-white;
+        border-color: $cl-white;
+        color: $cl-black;
+    }
+}
+.my-form-control{
+    padding: 0.56rem 0.75rem
+}
+// END COMPONENTS
+
+// NAVIGATION BAR
+.logo{
+    max-width: 120px;
+}
+.navbar-light{
+    .navbar-nav{
+        .active{
+            &>.nav-link{
+                color: $cl-primary;
+            }
+        }
+        .nav-link{
+            color: $cl-black;
+            &:hover{
+                color: $cl-primary;
+            }
+        }
+    }    
+}
+// END NAVIGATION BAR
+
+// CAROUSEL
+.carousel{
+    height: 100vh;
+    overflow: hidden;
+}
+// END CAROUSEL
+
+// PLACES
+.mycard{
+    padding-bottom: 50%;
+    background-color: $cl-primary;
+    transition: all .4s ease;
+    position: relative;
+    flex: 1;
+    .btn-price{
+        transform: scale(0);
+        transition: all .4s ease;
+    }
+    &:hover{
+        background-color: $cl-secondary;
+        .btn-price{
+            transform: scale(1);
+        }
+    }
+    .info{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: $cl-white;
+        h3{
+            white-space: nowrap;
+            text-align: center;
+        }
+    }
+}
+@media (min-width: 768px){
+    .mycard{
+        padding-bottom: 100%;
+    }
+}
+// END PLACES
+
+// CALENDAR
+.event{
+    .event-date{
+        min-width: 60px;
+        border-radius: 10px;
+        float: left;
+        background-color: $cl-primary;
+        &>*{
+            display: block;
+            color: white;
+        }
+        &_day{
+            font-size: $font-title;
+        }
+        &_month{
+            font-size: $font-subtitle;
+        }
+    }
+    .event-content{
+        display: table-cell;
+        padding-left: 10px;
+        .event-author{
+            font-size: $font-small;
+        }
+    }
+}
+// END CALENDAR
+
+// TESTIMONIAL
+.testimonial{
+    &_image{
+        float: left;
+        overflow: hidden;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        background-color: $cl-primary;
+    }
+    &_inner{
+        background-color: #fff;
+        border: 2px solid $cl-light-black;
+        line-height: 28px;
+        margin: 0px 0px 0px 120px;
+        padding: 20px;
+        position: relative;
+        &:before{
+            border: 20px solid transparent;
+            border-right-color:  $cl-light-black;
+            content: '';
+            display: block;
+            left: -42px;
+            position: absolute;
+            top: 20px;        
+        }
+        &:after{
+            border: 19px solid transparent;
+            border-right-color: #fff;
+            content: '';
+            display: block;
+            left: -38px;
+            position: absolute;
+            top: 21px;
+        }
+    }
+    &_title{
+        border-bottom: 2px solid $cl-light-black;
+    }
+    &_sign{
+        font-style: italic;
+        padding-right: 1.5rem;
+        font-size: $font-small;
+        text-align: right;
+    }
+}
+// END TESTIMONIAL
+
+// SOCIAL
+.social{
+    &_icons{
+        i{
+            color: white;
+            border: 2px solid white;
+            height: 55px;
+            width: 55px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+}
+// END SOCIAL

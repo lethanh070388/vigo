@@ -1,0 +1,99 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Vigo
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous")
+        link(rel="stylesheet" href="../css/bootstrap.css")
+        link(rel="stylesheet" href="../css/style.css")
+    body
+        //- navigation bar
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+            .container
+                a.navbar-brand(href="#")
+                    img.logo(src="../assets/logo.png")
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+
+                .collapse.navbar-collapse#navbarSupportedContent
+                    form.form-inline.my-2.my-lg-0
+                        .input-group
+                            input.form-control(type="text" placeholder="place you want to go..." aria-label="Search" aria-describedby="basic-addon2")
+                            .input-group-append
+                                button.btn.btn-outline-secondary(type="button")
+                                    i.fas.fa-search
+                        
+
+                    ul.navbar-nav.ml-auto
+                        -const menuItems = ["Home","About","Services","Promotion","Blog","Contact"];
+                        each n,i in menuItems
+                            if i==0
+                                li.nav-item.active
+                                    a.nav-link(href="#")= n
+                                        span.sr-only (current)
+                            else
+                                li.nav-item
+                                    a.nav-link(href="#")= n
+        //- end navigation bar
+        block content
+
+        //- footer-top
+        .container-fluid.bg-dark
+            .container
+                .row
+                    .col-md-4
+                        h1.my-4.text-white About us
+                        div.address.text-white
+                            table
+                                tr
+                                    td
+                                        b Office:
+                                    td 
+                                        |212 Nguyen Dinh Chieu Street, Ward 6,
+                                        br 
+                                        |Dist 3, HCMC.
+                                        br
+                                tr
+                                    td
+                                        b Hotline: 
+                                    td
+                                        |1800.1091 - Northern 
+                                        br
+                                        |1800.1093 - Central 
+                                        br
+                                        |1800.1094 - Southern
+                                tr
+                                    td
+                                        b TIN:
+                                    td 0901234567
+                    .col-md-4.d-flex.flex-column.justify-content-between
+                        h1.my-4.text-white Contact info
+                        .social
+                            .social_heading.text-white.mb-2
+                                b
+                                    |FAQs
+                                    br
+                                    |Recruitments
+                            .social_icons.pb-2
+                                i.fab.fa-facebook-f.fa-2x
+                                i.fab.fa-instagram.fa-2x
+                                i.fab.fa-skype.fa-2x
+                                i.fab.fa-youtube.fa-2x
+                    .col-md-4.d-flex.flex-column.justify-content-between
+                        h1.my-4.text-white Get info
+                        .form-info.pb-2
+                            form(action="#")
+                                .form-group
+                                    input#inputNameFooter.form-control(type="text" placeholder="Your name...")
+                                .input-group
+                                    input#inputEmailFooter.form-control(type="email" placeholder="Your email")
+                                    .input-group-append
+                                        button.btn.btn-outline-secondary(type="button")
+                                            i.fas.fa-arrow-right
+        //- footer-bottom
+
+        script(src="../js/jquery.js")
+        script(src="../js/popper.js")
+        script(src="../js/bootstrap.js")

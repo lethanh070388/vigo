@@ -1,0 +1,148 @@
+extends layout.pug                                   
+
+block content
+    //- carousel
+    #carouselExampleIndicators.carousel.slide(data-ride="carousel")
+        ol.carousel-indicators
+            li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+            li(data-target="#carouselExampleIndicators" data-slide-to="1")
+            li(data-target="#carouselExampleIndicators" data-slide-to="2")
+        .carousel-inner
+            .carousel-item.active
+                img.d-block.w-100(src="../assets/slide-1.jpg" alt="First slide")
+            .carousel-item
+                img.d-block.w-100(src="../assets/slide-2.jpg" alt="Second slide")
+            .carousel-item
+                img.d-block.w-100(src="../assets/slide-3.jpg" alt="Third slide")
+        a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.sr-only Previous
+
+        a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.sr-only Next
+    //- end carousel
+
+    //- recent places
+    .container
+        .d-flex.row.justify-content-center
+            .col-sm-8
+                h1.my-4.text-center Most Recent Places
+                p.mb-4.text-center List of most recent interesting places and events in our directory submitted by our users. Check whats going on in the city now.
+        .row.mb-4
+            -const places = [{name:"Da Nang",price:235},{name:"Ha Noi",price:235},{name:"Sapa",price:235},{name:"HCM",price:235},{name:"Ha Long",price:235},{name:"Da Lat",price:235},{name:"Hoi An",price:235},{name:"Quang Binh",price:235}];
+            each n in places
+                .col-sm-6.col-md-4.col-lg-3
+                    .mycard.mb-4
+                        .info.d-flex.align-items-center.justify-content-center.flex-column
+                            h3= n.name
+                            button.btn.btn-primary.btn-lg.btn-price(type="button")= n.price | $
+    //- end recent places
+
+    //- calendar
+    .container-fluid.bg-grey
+        .container
+            .row
+                -for(var i=1; i<=6; i++){
+                    .col-sm-6
+                        .event.clearfix.py-4
+                            .event-date.text-center
+                                span.event-date_day.font-weight-bold.mt-2 20
+                                span.event-date_month.font-weight-bold.mb-2 april
+                            .event-content
+                                h3.event-title Pomelo sweet pudding: A great summertime treat 
+                                p.event-author
+                                    | by 
+                                    b Sophie 
+                                    | at 02:30  Apr 20, 2018 
+                                p Pomelo sweet pudding is a pure and light dessert containing mung bean, pomelo skin, and coconut milk. The mung beans should be selected carefully...
+                -}
+    
+    //- end calendar
+
+    //- promotion
+    .container
+        .d-flex.row.justify-content-center
+            .col-sm-8
+                h1.my-4.text-center Hot Promotion
+                p.mb-4.text-center Check out the best places &#38; events in the city. Each one is worth of visiting. Experience which you never forget.
+        .row
+            .col-md-8
+                .row
+                    .col
+                        .mycard.pb-25.mb-4
+                            .info.d-flex.align-items-center.justify-content-center.flex-column
+                                h3 
+                                    |BONSAI DINNER CRUISE
+                                    br
+                                    |15% OFF
+                                button.btn.btn-primary.btn-lg.btn-price(type="button") 235$
+                .row
+                    .col-sm-6
+                        .mycard.pb-50.mb-4
+                            .info.d-flex.align-items-center.justify-content-center.flex-column
+                                h3 
+                                    |DALAT BY AIR (3D2N)
+                                    br
+                                    |10% OFF
+                    .col-sm-6
+                        .mycard.pb-50.mb-4
+                            .info.d-flex.align-items-center.justify-content-center.flex-column
+                                h3 
+                                    |HUE FESTIVAL SPECIALS
+                                    br
+                                    |15% OFF10
+            .col-md-4.d-flex
+                .mycard.mb-4
+                    .info.d-flex.align-items-center.justify-content-center.flex-column
+                        h3 
+                            |BUY 1 TOUR,
+                            br
+                            |GET 1 FREE TICKET 
+                            br
+                            |TO THE RAINBOW SHOW
+    //- end promotion
+
+    //- testimonial
+    .container-fluid.bg-grey
+        .container.pb-4
+            .row
+                -for(var i=1; i<=4; i++){
+                    .col-md-6
+                        .testimonial.clearfix.py-4
+                            .testimonial_image
+                            .testimonial_inner
+                                h3.testimonial_title.py-4 Exactly what i need
+                                p.testimonial_content.pt-4 Oh, all right, I am. But if anything happens to me, tell them I died robbing some old man. Calculon is gonna kill us and it's a...  
+                                .testimonial_sign 
+                                    |- 
+                                    b Sophie 
+                                    |(HCM, Vietnam) 
+                -}
+            .row
+                .col.text-center
+                    button.btn.btn-secondary See more
+    //- end testimonial
+
+    //- contact
+    .container-fluid.bg-blue
+        .container.pb-4
+            .d-flex.row.justify-content-center
+                .col-sm-8
+                    h1.my-4.text-center.text-white You have any question?
+            form(action="#")
+                .row
+                    .col-sm-6
+                        .form-group
+                            input#inputName.form-control.my-form-control(type="text" placeholder="Your name...")
+                        .form-group
+                            input#inputPhone.form-control.my-form-control(type="text" placeholder="Your phone")
+                        .form-group
+                            input#inputEmail.form-control.my-form-control(type="email" placeholder="Your email")
+                    .col-sm-6
+                        .form-group
+                            textarea#formControlTextarea.form-control(rows="6")
+                .row
+                    .col.text-center
+                        button.btn.btn-secondary Talk to us
+    //- end contact
