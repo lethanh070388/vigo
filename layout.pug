@@ -7,6 +7,8 @@ html
         title Vigo
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous")
         link(rel="stylesheet" href="../css/bootstrap.css")
+        link(rel="stylesheet" href="../css/owl.carousel.min.css")
+        link(rel="stylesheet" href="../css/owl.theme.default.min.css")
         link(rel="stylesheet" href="../css/style.css")
     body
         //- navigation bar
@@ -27,16 +29,62 @@ html
                         
 
                     ul.navbar-nav.ml-auto
-                        -const menuItems = ["home","about","services","promotion","blog","contact"];
-                        each n,i in menuItems
-                            if i==0
-                                li.nav-item.active
-                                    a.nav-link(href="index.html")= n
-                                        span.sr-only (current)
-                            else
-                                li.nav-item
-                                    a.nav-link(href=""+n+".html")= n
+                        //- -const menuItems = ["home","about","services","promotion","blog","contact"];
+                        //- each n,i in menuItems
+                        //-     if i==0
+                        //-         li.nav-item.active
+                        //-             a.nav-link(href="index.html")= n
+                        //-                 span.sr-only (current)
+                        //-     else
+                        //-         li.nav-item
+                        //-             a.nav-link(href=""+n+".html")= n
+                        li.nav-item.active
+                            a.nav-link(href="index.html") Home
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href="about.html") About
+                        li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Service
+                            .dropdown-menu(aria-labelledby="navbarDropdown")
+                                ul.navbar-nav
+                                    li.nav-item.dropdown-sub
+                                        a.dropdown-item(href="#") Tour
+                                        .dropdown-submenu
+                                            a.dropdown-item(href="#") Northern
+                                            .dropdown-divider
+                                            a.dropdown-item(href="#") Central
+                                            .dropdown-divider
+                                            a.dropdown-item(href="#") Southern
+                                        .dropdown-divider
+                                        a.dropdown-item(href="#") Service
+                        li.nav-item
+                            a.nav-link(href="#") Promotion
+                        li.nav-item
+                            a.nav-link(href="article.html") Blog
+                        li.nav-item
+                            a.nav-link(href="#") Contact
         //- end navigation bar
+        //- carousel
+        #carouselExampleIndicators.carousel.slide(data-ride="carousel")
+            ol.carousel-indicators
+                li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+                li(data-target="#carouselExampleIndicators" data-slide-to="1")
+                li(data-target="#carouselExampleIndicators" data-slide-to="2")
+            .carousel-inner
+                .carousel-item.active
+                    img.d-block.w-100(src="../assets/slide-1.jpg" alt="First slide")
+                .carousel-item
+                    img.d-block.w-100(src="../assets/slide-2.jpg" alt="Second slide")
+                .carousel-item
+                    img.d-block.w-100(src="../assets/slide-3.jpg" alt="Third slide")
+            a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
+                span.carousel-control-prev-icon(aria-hidden="true")
+                span.sr-only Previous
+
+            a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
+                span.carousel-control-next-icon(aria-hidden="true")
+                span.sr-only Next
+        //- end carousel
         block content
 
         //- footer-top
@@ -102,4 +150,5 @@ html
         script(src="../js/jquery.js")
         script(src="../js/popper.js")
         script(src="../js/bootstrap.js")
+        script(src="../js/owl.carousel.min.js")
         script(src="../js/custom.js")
