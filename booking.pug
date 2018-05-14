@@ -1,0 +1,73 @@
+extends layout.pug
+block content
+    .container-fluid
+        .row.bg-blue.py-4
+            .col.d-flex.justify-content-center
+                .banner.py-4
+                    h1.text-center.text-white
+                        |Glad you had your trip.  
+                        br
+                        |Let finish the last step!
+        .d-flex.row.justify-content-center
+            .col-sm-8
+                .timeline.my-4
+                    .step_1 1
+                    .step_2 2
+                    .step_3 3
+    .container.bg-blue.my-4
+        .row.p-4
+            .col-sm-4.d-flex
+                .img-wrapper
+            .col-sm-8
+                .booking-form
+                    h3.text-white Da Nang - Hue - Hoi An
+                    .fromto.text-white.py-4 
+                        |From 
+                        span.from 12/06/2018 
+                        |to
+                        span.to 22/06/2018
+                    .passenger_info
+                        form(action="#")
+                            .row.text-white
+                                .col Price. of Passengers: 
+                                .col 
+                                    input#inputNoAdult.form-control(type="number" value="1" min="0")
+                                    label(for="#inpitNoAdult")
+                                        small Adult (Age 12 and over)
+                                .col 
+                                    input#inputNoChild.form-control(type="number" value="1" min="0")
+                                    label(for="#inpitNoChild")
+                                        small Child ( Age 2 - 11)
+                                .col 
+                                    input#inputNoInfant.form-control(type="number" value="1" min="0")
+                                    label(for="#inpitNoInfant")
+                                        small Infant (below age 2) 
+                            .row.text-white
+                                .col No. of Passengers: 
+                                .col 
+                                    input#inputPriceAdult.form-control.input-display(type="text" value="235$" disabled)
+                                    label(for="#inpitPriceAdult")
+                                        small Not included Hotel &#38; Flight fee
+                                .col 
+                                    input#inputPriceChild.form-control.input-display(type="text" value="235$" disabled)
+                                    label(for="#inpitPriceChild")
+                                        small 80% price for adultNot 
+                                .col 
+                                    input#inputPriceInfant.form-control.input-display(type="text" value="235$" disabled)
+                                    label(for="#inpitPriceInfant")
+                                        small 20% price for adultNot 
+                            .row
+                                .col
+                                    hr.line-thin-blue
+                            .row.text-white
+                                .col-3 Total price: 
+                                .col-9 
+                                    input#inputTotal.form-control.input-display(type="text" value="493$" disabled)
+                                    label(for="#inputTotal")
+                            .row
+                                .col-3
+                                .col-9
+                                    .form-group.text-center
+                                        button.btn.btn-secondary.input-display Continue
+                                      
+                            

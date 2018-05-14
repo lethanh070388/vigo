@@ -1,0 +1,20 @@
+extends layout.pug
+block content
+    .container
+        .row
+            .col-sm-4
+                .mycard
+                    .info.d-flex.align-items-center.justify-content-center.flex-column
+                        h3 Da Nang
+                        button.btn.btn-primary.btn-lg.btn-price(type="button" data-toggle="modal" data-target="#myModal") Click
+        .row
+            .col
+                #myModal.modal
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                h4.modal-title Modal Heading
+                                button.close(type="button" data-dismiss="modal") &times;
+                            .modal-body  Modal body..
+                            .modal-footer
+                                button.btn.btn-danger(type="button" data-dismiss="modal") Close

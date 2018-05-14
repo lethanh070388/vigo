@@ -18,10 +18,10 @@ img{
     width: 100%;
 }
 h1{
-    font-size: $font-content*2.5;
+    font-size: $font-content*2;
 }
 h2{
-    font-size: $font-content*2;
+    font-size: $font-content*1.7;
 }
 h3{
     font-size: $font-content*1.3;
@@ -37,6 +37,10 @@ hr.line-blue{
     border-color: $cl-primary;
     border-width: 2px;
 }
+hr.line-thin-blue{
+    border-color: $cl-secondary;
+    border-width: 1px;
+}
 @media (min-width: 576px){
     .pb-25{
         padding-bottom: 25% !important;
@@ -46,14 +50,11 @@ hr.line-blue{
     }
 }
 @media (min-width: 768px){
-    .pb-25{
+    .pb-md-25{
         padding-bottom: 25% !important;
     }
 }
 @media (min-width: 992px){
-    .pb-25{
-        padding-bottom: 25% !important;
-    }
     .pb-lg-100{
         padding-bottom: 100% !important;
 
@@ -83,6 +84,11 @@ small{
 td {
     vertical-align: text-top;
     padding-right: 10px;
+}
+.img-wrapper{
+    position: relative;
+    background-color: $cl-white;
+    flex: 1;
 }
 .img-absolute{
     position: absolute;
@@ -351,28 +357,28 @@ td {
     }
     &_inner{
         background-color: #fff;
-        border: 2px solid $cl-light-black;
+        border: 1px solid $cl-light-black;
         line-height: 28px;
         margin: 0px 0px 0px 120px;
         padding: 20px;
         position: relative;
         &:before{
             border: 20px solid transparent;
-            border-right-color:  $cl-light-black;
+            border-right-color: #000;
             content: '';
             display: block;
-            left: -42px;
+            left: -41px;
             position: absolute;
             top: 20px;        
         }
         &:after{
-            border: 19px solid transparent;
+            border: 20px solid transparent;
             border-right-color: #fff;
             content: '';
             display: block;
-            left: -38px;
+            left: -40px;
             position: absolute;
-            top: 21px;
+            top: 20px;
         }
     }
     &_title{
@@ -446,25 +452,21 @@ td {
         position: relative;
         overflow: hidden;
     }
-    .current .item{
-        background: $cl-primary;
+    .current{
+        .item{
+            background: $cl-primary;
+        }
     }
 }
   
   
   
-.owl-theme {
-    .owl-nav {
-      /*default owl-theme theme reset .disabled:hover links */
-      [class*='owl-'] {
-        transition: all .3s ease;
-        &.disabled:hover {
-            background-color: #D6D6D6;
-        }   
-      }
-    }
-}
-  
+[class*='owl-'] {
+    transition: all .3s ease;
+    &.disabled:hover {
+        background-color: #D6D6D6;
+    }   
+}  
   //arrows on first carousel
 #sync1.owl-theme {
     position: relative;
@@ -484,17 +486,99 @@ td {
 }
 // END PRODUCT
 
+// MODAL
+.modal.show{
+    .modal-dialog {
+        -webkit-transform: translate(0,0);
+        transform: translate(10px,0);
+    }
+}
+@media (min-width: 576px)
+{
+    .modal-dialog {
+        max-width: 96%;
+    }
+}
+// END MODAL
+
+// BOOKING
+.timeline{
+    min-height: 3.5rem;
+    position: relative;
+    &:before{
+        content: '';
+        width: 100%;
+        height: 4px;
+        background-color: $cl-primary;
+        position: absolute;
+        top: 50%;
+        margin-top: -2px;
+    }
+    %step{
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        border: 2px solid $cl-primary;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: $cl-white;
+        text-align: center;
+        color: $cl-primary;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    .step_1,
+    .step_2,
+    .step_3{
+        @extend %step;
+    }
+    .step_1{
+        background-color: $cl-primary;
+        color: $cl-white;
+        left: 0;
+    }
+    .step_2{
+        left: 50%;
+    }
+    .step_3{
+        left: 100%;
+    }
+}
+.fromto{
+    span{
+        font-weight: bold;
+    }
+}
+.input-display{
+    background-color: $cl-secondary;
+    text-align: center;
+    font-weight: bold;
+    border-color: transparent;
+}
+.passenger_info{
+    .form-control:disabled, .form-control[readonly] {
+        background-color: $cl-secondary;
+    }
+}
+
+//BOOKING
+
 // RESPONSIVE
 
 @media (max-width: 767px){
+    html{
+        font-size: $font-content*0.8;
+    }
     body{
         font-size: $font-content*0.8;
     }
     h1{
-        font-size: $font-content*2.5*0.8;
+        font-size: $font-content*2*0.8;
     }
     h2{
-        font-size: $font-content*2*0.8;
+        font-size: $font-content*1.7*0.8;
     }
     h3{
         font-size: $font-content*1.3*0.8;
