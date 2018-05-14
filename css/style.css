@@ -78,7 +78,8 @@ td {
 .img-wrapper {
   position: relative;
   background-color: #fff;
-  flex: 1; }
+  flex: 1;
+  min-height: 150px; }
 
 .img-absolute {
   position: absolute;
