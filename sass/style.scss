@@ -20,6 +20,9 @@ img{
 h1{
     font-size: $font-content*2.5;
 }
+h2{
+    font-size: $font-content*2;
+}
 h3{
     font-size: $font-content*1.3;
     font-weight: 500;
@@ -59,7 +62,6 @@ hr.line-blue{
 .pb-50{
     padding-bottom: 50% !important;
 }
-
 .bg-grey{
     background-color: $cl-grey;
 }
@@ -68,6 +70,9 @@ hr.line-blue{
 }
 .bg-dark{
     background-color: $cl-light-black;
+}
+.c-blue{
+    color: $cl-primary;
 }
 b,strong{
     font-weight: 700;
@@ -86,6 +91,9 @@ td {
     right: 0;
     bottom: 0;
     margin: auto;
+}
+.table-cell{
+    display: table-cell;
 }
 // END BASE
 
@@ -127,6 +135,39 @@ td {
 }
 .my-form-control{
     padding: 0.56rem 0.75rem
+}
+
+.pagination{
+    &_icon{
+        background-color: $cl-primary;
+        border-radius: 50%;
+        background-color: #00b9af;
+        border-radius: 50%;
+        width: 20px;
+        text-align: center;
+        line-height: 20px;
+        height: 20px;
+        color: white;
+    }
+    &_prev{
+        padding-right: 3px;
+    }
+    &_next{
+        padding-left: 3px;
+    }
+}
+.page-link {
+    color: $cl-black;
+    font-weight: 500;
+    border: 0;
+    &.current,
+    &:hover{
+        color: $cl-primary;
+        background-color: transparent;
+    }
+}
+.form-control{
+    border: 0;
 }
 // END COMPONENTS
 
@@ -223,7 +264,7 @@ td {
 
 // CAROUSEL
 .carousel{
-    height: 100vh;
+    height: 50vh;
     overflow: hidden;
 }
 // END CAROUSEL
@@ -245,12 +286,16 @@ td {
         .btn-price{
             transform: scale(1);
         }
+        .info{
+            transform: translate(-50%,-50%);
+        }
     }
     .info{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,0);
+        transition: all .4s ease;
         color: $cl-white;
         h3{
             white-space: nowrap;
@@ -269,7 +314,7 @@ td {
 .event{
     .event-date{
         min-width: 60px;
-        border-radius: 10px;
+        border-radius: 5px;
         float: left;
         background-color: $cl-primary;
         &>*{
@@ -302,7 +347,7 @@ td {
         width: 80px;
         height: 80px;
         background-color: $cl-primary;
-        border-radius: 10px;
+        border-radius: 5px;
     }
     &_inner{
         background-color: #fff;
@@ -359,6 +404,24 @@ td {
 }
 // END SOCIAL
 
+// GUIDER
+.guider{
+    &_avatar{
+        background-color: $cl-primary;
+        width: 100%;
+        padding-bottom: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    &_info{
+        &_short{
+            font-size: $font-content;
+            font-weight: 300;
+        }
+    }
+}
+
+// END GUIDER
 
 // PRODUCT
 #sync1 {
@@ -430,6 +493,9 @@ td {
     h1{
         font-size: $font-content*2.5*0.8;
     }
+    h2{
+        font-size: $font-content*2*0.8;
+    }
     h3{
         font-size: $font-content*1.3*0.8;
     }
@@ -458,5 +524,8 @@ td {
                 font-size: $font-small*0.9;
             }
         }
+    }
+    .guider_info_short{
+        font-size: $font-content*0.8;
     }
 }

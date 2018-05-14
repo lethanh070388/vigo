@@ -17,6 +17,9 @@ img {
 h1 {
   font-size: 40px; }
 
+h2 {
+  font-size: 32px; }
+
 h3 {
   font-size: 20.8px;
   font-weight: 500; }
@@ -58,6 +61,9 @@ hr.line-blue {
 .bg-dark {
   background-color: #575757; }
 
+.c-blue {
+  color: #00b9af; }
+
 b, strong {
   font-weight: 700; }
 
@@ -75,6 +81,9 @@ td {
   right: 0;
   bottom: 0;
   margin: auto; }
+
+.table-cell {
+  display: table-cell; }
 
 .btn-primary {
   color: #fff;
@@ -108,6 +117,32 @@ td {
 
 .my-form-control {
   padding: 0.56rem 0.75rem; }
+
+.pagination_icon {
+  background-color: #00b9af;
+  border-radius: 50%;
+  background-color: #00b9af;
+  border-radius: 50%;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+  color: white; }
+.pagination_prev {
+  padding-right: 3px; }
+.pagination_next {
+  padding-left: 3px; }
+
+.page-link {
+  color: #31302f;
+  font-weight: 500;
+  border: 0; }
+  .page-link.current, .page-link:hover {
+    color: #00b9af;
+    background-color: transparent; }
+
+.form-control {
+  border: 0; }
 
 .logo {
   max-width: 120px; }
@@ -172,7 +207,7 @@ td {
     padding-right: 1rem;
     padding-left: 1rem; } }
 .carousel {
-  height: 100vh;
+  height: 50vh;
   overflow: hidden; }
 
 .mycard {
@@ -189,11 +224,14 @@ td {
     background-color: #80d8d4; }
     .mycard:hover .btn-price {
       transform: scale(1); }
+    .mycard:hover .info {
+      transform: translate(-50%, -50%); }
   .mycard .info {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
+    transition: all .4s ease;
     color: #fff; }
     .mycard .info h3 {
       white-space: nowrap;
@@ -204,7 +242,7 @@ td {
     padding-bottom: 100%; } }
 .event .event-date {
   min-width: 60px;
-  border-radius: 10px;
+  border-radius: 5px;
   float: left;
   background-color: #00b9af; }
   .event .event-date > * {
@@ -227,7 +265,7 @@ td {
   width: 80px;
   height: 80px;
   background-color: #00b9af;
-  border-radius: 10px; }
+  border-radius: 5px; }
 .testimonial_inner {
   background-color: #fff;
   border: 2px solid #575757;
@@ -268,6 +306,16 @@ td {
   line-height: 50px;
   border-radius: 50%;
   margin-right: 10px; }
+
+.guider_avatar {
+  background-color: #00b9af;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  position: relative; }
+.guider_info_short {
+  font-size: 16px;
+  font-weight: 300; }
 
 #sync1 .item {
   background: #00b9af;
@@ -317,6 +365,9 @@ td {
   h1 {
     font-size: 32px; }
 
+  h2 {
+    font-size: 25.6px; }
+
   h3 {
     font-size: 16.64px; }
 
@@ -334,6 +385,9 @@ td {
   .event .event-date_month {
     font-size: 16px; }
   .event .event-content .event-author {
-    font-size: 11.7px; } }
+    font-size: 11.7px; }
+
+  .guider_info_short {
+    font-size: 12.8px; } }
 
 /*# sourceMappingURL=style.css.map */

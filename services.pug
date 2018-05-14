@@ -1,0 +1,139 @@
+extends layout.pug
+block content
+    .container
+        .row.pt-4
+            .col
+                h1.my-4.text-center Most Recent Tour Leaders 
+                p.py-4 Beneath the surface there is always more to be discovered, and truly the fasted way to gain that knowledge and to truly understand what you see is to make use a local Tour Guide. We know that a Tour guide can make a big difference on the outcome of a trip and alter your experience both positively and negatively. So at VIGO we always evaluate personality along with knowledge when we select our guides.
+    .container-fluid
+        .row.py-4.bg-grey
+            .container
+                .row
+                    .col-sm-3
+                        .guider_avatar
+                    .col-sm-9
+                        .guide_info
+                            h3 
+                                |So Ji Sub, Mr.
+                                span.guider_info_short (40 years old, from HCMC) 
+                            .row
+                                .col.d-flex.flex-row
+                                    .col-left
+                                        h3 Exp:
+                                    .col-right
+                                        div.table-cell
+                                            h3 10 years
+                                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore magni quae voluptates laboriosam, id rerum voluptatum nostrum natus doloribus!
+                            h3 Tours: Son Doong Cave, Da Nang - Hoi An - Hue, Ninh Binh, ... 
+                            h3 Vote:
+                                span 
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.far.fa-heart.c-blue.mx-1
+    .container-fluid
+        .row.py-4
+            .container
+                .row
+                    .col-sm-3
+                        .guider_avatar
+                    .col-sm-9
+                        .guide_info
+                            h3 
+                                |So Ji Sub, Mr.
+                                span.guider_info_short (40 years old, from HCMC) 
+                            .row
+                                .col.d-flex.flex-row
+                                    .col-left
+                                        h3 Exp:
+                                    .col-right
+                                        div.table-cell
+                                            h3 10 years
+                                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore magni quae voluptates laboriosam, id rerum voluptatum nostrum natus doloribus!
+                            h3 Tours: Son Doong Cave, Da Nang - Hoi An - Hue, Ninh Binh, ... 
+                            h3 Vote:
+                                span 
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.far.fa-heart.c-blue.mx-1
+    .container-fluid
+        .row.py-4.bg-grey
+            .container
+                .row
+                    .col-sm-3
+                        .guider_avatar
+                    .col-sm-9
+                        .guide_info
+                            h3 
+                                |So Ji Sub, Mr.
+                                span.guider_info_short (40 years old, from HCMC) 
+                            .row
+                                .col.d-flex.flex-row
+                                    .col-left
+                                        h3 Exp:
+                                    .col-right
+                                        div.table-cell
+                                            h3 10 years
+                                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore magni quae voluptates laboriosam, id rerum voluptatum nostrum natus doloribus!
+                            h3 Tours: Son Doong Cave, Da Nang - Hoi An - Hue, Ninh Binh, ... 
+                            h3 Vote:
+                                span 
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.far.fa-heart.c-blue.mx-1
+    .container-fluid
+        .row.py-4
+            .container
+                .row
+                    .col-sm-3
+                        .guider_avatar
+                    .col-sm-9
+                        .guide_info
+                            h3 
+                                |So Ji Sub, Mr.
+                                span.guider_info_short (40 years old, from HCMC) 
+                            .row
+                                .col.d-flex.flex-row
+                                    .col-left
+                                        h3 Exp:
+                                    .col-right
+                                        div.table-cell
+                                            h3 10 years
+                                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore magni quae voluptates laboriosam, id rerum voluptatum nostrum natus doloribus!
+                            h3 Tours: Son Doong Cave, Da Nang - Hoi An - Hue, Ninh Binh, ... 
+                            h3 Vote:
+                                span 
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.fas.fa-heart.c-blue.mx-1
+                                    i.far.fa-heart.c-blue.mx-1
+                    nav.mx-auto.pt-4(aria-label="Pagination")
+                        ul.pagination.mb-0
+                            li.page-item
+                                a.page-link(href="#" aria-label="Previous")
+                                    span(aria-hidden="true")
+                                        i.fas.fa-caret-left.pagination_icon.pagination_prev
+                                    span.sr-only Previous
+                            -for(var i=1; i<=5; i++){
+                                if i==1
+                                    li.page-item
+                                        a.page-link.current(href="#")= i
+                                else
+                                    li.page-item
+                                        a.page-link(href="#")= i
+                            -}
+                            li.page-item
+                                a.page-link(href="#" aria-label="Next")
+                                    span(aria-hidden="true")
+                                        i.fas.fa-caret-right.pagination_icon.pagination_next
+                                    span.sr-only Next 
+
+
+            
+

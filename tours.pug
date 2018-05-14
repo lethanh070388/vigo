@@ -1,0 +1,52 @@
+extends layout.pug                                   
+block content
+    .container
+        .row.pt-4
+            .col
+                h1.my-4.text-center Most Recent Places
+                p.py-4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora cum? Similique veritatis dicta voluptatem excepturi suscipit voluptates, magni aut quasi ea maxime! Eum iure, quibusdam perferendis, quam dolorum cumque mollitia in optio sequi eos hic vitae porro vel illum assumenda ullam, error officia cupiditate eveniet odit? Quod natus nisi tenetur, officiis consectetur tempora dolore eaque quae odit illum, at nam accusamus aliquid. Ipsam asperiores voluptates nobis animi totam debitis optio omnis, hic illo dolores ex repudiandae at veritatis possimus dignissimos velit ad ab cumque, nam excepturi deserunt repellat eos sed corporis? Dolores laborum velit fugit placeat debitis repudiandae eligendi.
+                p.py-4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure fugit consequatur repellat iste ducimus nam architecto sapiente tempore? Perspiciatis optio quam nemo velit itaque ipsum exercitationem deserunt rem asperiores laboriosam! Aspernatur dolores excepturi autem libero. Quibusdam non ab minus pariatur fugit deserunt corporis sapiente suscipit quo consequuntur reiciendis ducimus harum debitis, voluptas fugiat sit voluptatem ipsum temporibus nemo sed labore nulla est! Reiciendis velit quae dolores maxime, beatae consequuntur deleniti porro eos nostrum minima fugiat, provident vel temporibus, earum exercitationem. Numquam vero quia eveniet placeat laudantium error alias necessitatibus earum impedit soluta ipsa quod quas delectus nihil molestias, expedita distinctio voluptates, vel cum pariatur iste dolore. Optio quas perferendis eligendi, sit ipsam eos voluptas eum nemo ullam eaque expedita non beatae veritatis doloribus eius totam possimus. Cumque explicabo tempore harum veniam saepe, voluptatem aspernatur voluptas maxime, accusamus esse, ducimus ut assumenda consectetur in quod qui officia debitis eos corporis! Excepturi.
+        .row
+            -const places = [{name:"Da Nang",price:235},{name:"Ha Noi",price:235},{name:"Sapa",price:235},{name:"HCM",price:235},{name:"Ha Long",price:235},{name:"Da Lat",price:235},{name:"Hoi An",price:235},{name:"Quang Binh",price:235}];
+            each n in places
+                .col-sm-6
+                    .mycard.mb-4
+                        .info.d-flex.align-items-center.justify-content-center.flex-column
+                            h3= n.name
+                            button.btn.btn-primary.btn-lg.btn-price(type="button")= n.price + "$"
+            nav.mx-auto(aria-label="Pagination")
+                ul.pagination.mb-0
+                    li.page-item
+                        a.page-link(href="#" aria-label="Previous")
+                            span(aria-hidden="true")
+                                i.fas.fa-caret-left.pagination_icon.pagination_prev
+                            span.sr-only Previous
+                    -for(var i=1; i<=5; i++){
+                        if i==1
+                            li.page-item
+                                a.page-link.current(href="#")= i
+                        else
+                            li.page-item
+                                a.page-link(href="#")= i
+                    -}
+                    li.page-item
+                        a.page-link(href="#" aria-label="Next")
+                            span(aria-hidden="true")
+                                i.fas.fa-caret-right.pagination_icon.pagination_next
+                            span.sr-only Next
+        .row
+            .col
+                hr.line-blue.mb-4
+        .row
+            .col-md-4
+                .mycard.mb-4
+                    .info.d-flex.align-items-center.justify-content-center.flex-column
+                        h3 Ha Long
+            .col-md-4
+                .mycard.mb-4
+                    .info.d-flex.align-items-center.justify-content-center.flex-column
+                        h3 Quang Binh
+            .col-md-4
+                .mycard.mb-4
+                    .info.d-flex.align-items-center.justify-content-center.flex-column
+                        h3 Hue

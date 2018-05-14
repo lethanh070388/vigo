@@ -46,17 +46,24 @@ html
                         li.nav-item.dropdown
                             a#navbarDropdown.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Service
                             .dropdown-menu(aria-labelledby="navbarDropdown")
-                                ul.navbar-nav
+                                ul.navbar-nav.flex-column
                                     li.nav-item.dropdown-sub
-                                        a.dropdown-item(href="#") Tour
+                                        a.dropdown-item(href="tours.html") Tour
                                         .dropdown-submenu
                                             a.dropdown-item(href="#") Northern
                                             .dropdown-divider
                                             a.dropdown-item(href="#") Central
                                             .dropdown-divider
                                             a.dropdown-item(href="#") Southern
-                                        .dropdown-divider
-                                        a.dropdown-item(href="#") Service
+                                    .dropdown-divider
+                                    li.nav-item.dropdown-sub
+                                        a.dropdown-item(href="services.html") Service
+                                        .dropdown-submenu
+                                            a.dropdown-item(href="#") Flight
+                                            .dropdown-divider
+                                            a.dropdown-item(href="#") Hotel
+                                            .dropdown-divider
+                                            a.dropdown-item(href="services.html") Tourguide
                         li.nav-item
                             a.nav-link(href="#") Promotion
                         li.nav-item
