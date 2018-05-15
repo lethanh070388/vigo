@@ -54,13 +54,16 @@ hr.line-thin-blue {
   padding-bottom: 50% !important; }
 
 .bg-grey {
-  background-color: #edefef; }
+  background-color: #edefef !important; }
 
 .bg-blue {
-  background-color: #00b9af; }
+  background-color: #00b9af !important; }
 
 .bg-dark {
-  background-color: #575757; }
+  background-color: #575757 !important; }
+
+.bg-white {
+  background-color: #fff !important; }
 
 .c-blue {
   color: #00b9af; }
@@ -79,7 +82,8 @@ td {
   position: relative;
   background-color: #fff;
   flex: 1;
-  min-height: 150px; }
+  min-height: 220px;
+  overflow: hidden; }
 
 .img-absolute {
   position: absolute;
@@ -88,6 +92,9 @@ td {
   right: 0;
   bottom: 0;
   margin: auto; }
+
+.table-row {
+  display: table-row; }
 
 .table-cell {
   display: table-cell; }
@@ -190,13 +197,14 @@ td {
   width: 100%; }
   .dropdown-sub .dropdown-submenu {
     position: absolute;
-    left: 105%;
+    left: 100.5%;
     top: 0;
     padding: 0.5rem 0;
-    display: none;
+    visibility: hidden;
+    transition: all .4s ease;
     background-color: #edefef; }
   .dropdown-sub:hover .dropdown-submenu {
-    display: block; }
+    visibility: visible; }
 
 .dropdown-item {
   font-weight: 300; }
@@ -370,6 +378,23 @@ td {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 96%; } }
+.timeline .step_1,
+.timeline .step_2,
+.timeline .step_3, #formStep1:before, #formStep2:before, #formStep3:before {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border: 2px solid #00b9af;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  text-align: center;
+  color: #00b9af;
+  font-weight: 500;
+  font-size: 2rem; }
+
 .timeline {
   min-height: 3.5rem;
   position: relative; }
@@ -381,22 +406,6 @@ td {
     position: absolute;
     top: 50%;
     margin-top: -2px; }
-  .timeline .step_1,
-  .timeline .step_2,
-  .timeline .step_3 {
-    width: 3.5rem;
-    height: 3.5rem;
-    line-height: 3.5rem;
-    border: 2px solid #00b9af;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    text-align: center;
-    color: #00b9af;
-    font-weight: 500;
-    font-size: 2rem; }
   .timeline .step_1 {
     background-color: #00b9af;
     color: #fff;
@@ -417,6 +426,65 @@ td {
 
 .passenger_info .form-control:disabled, .passenger_info .form-control[readonly] {
   background-color: #80d8d4; }
+
+#formStep1 {
+  position: relative; }
+  #formStep1:before {
+    content: '1';
+    background-color: #80d8d4;
+    top: .4rem;
+    right: .4rem;
+    transform: translate(0); }
+
+#formStep2 {
+  position: relative; }
+  #formStep2:before {
+    content: '2';
+    background-color: #00b9af;
+    color: #fff;
+    top: .4rem;
+    right: .4rem;
+    transform: translate(0); }
+
+#formStep3 {
+  position: relative; }
+  #formStep3:before {
+    content: '3';
+    background-color: #00b9af;
+    color: #fff;
+    top: .4rem;
+    right: .4rem;
+    transform: translate(0); }
+
+#bookingStep1 {
+  display: block; }
+
+#bookingStep2 {
+  display: none; }
+
+#bookingStep3 {
+  display: none; }
+
+.payment {
+  border: 5px solid transparent;
+  transition: all 0.5s ease;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.6rem;
+  flex: 1; }
+  .payment:hover {
+    border-color: #00b9af;
+    cursor: pointer; }
+
+.policy {
+  background-color: #80d8d4;
+  font-size: 13px;
+  padding: 1rem;
+  height: 150px;
+  overflow-y: auto; }
+
+.blog .author {
+  font-weight: bold; }
 
 @media (max-width: 767px) {
   html {
@@ -452,5 +520,35 @@ td {
 
   .guider_info_short {
     font-size: 12.8px; } }
+.loading {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1503656701522-a5a236ed2779?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=33a69025f49fc4aea10a1c368a10f62a");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; }
+  .loading:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5s ease; }
+  .loading:hover:after {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .loading .btn-enter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00b9af;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1rem 4rem;
+    font-size: 26px;
+    border-radius: 15px;
+    z-index: 5; }
+    .loading .btn-enter:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+      cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

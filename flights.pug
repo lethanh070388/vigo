@@ -1,21 +1,32 @@
 extends layout.pug
-block carousel
-    #carouselExampleIndicators.carousel.slide(data-ride="carousel")
-        ol.carousel-indicators
-            li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
-            li(data-target="#carouselExampleIndicators" data-slide-to="1")
-            li(data-target="#carouselExampleIndicators" data-slide-to="2")
-        .carousel-inner
-            .carousel-item.active
-                img.d-block.w-100(src="../assets/slide-1.jpg" alt="First slide")
-            .carousel-item
-                img.d-block.w-100(src="../assets/slide-2.jpg" alt="Second slide")
-            .carousel-item
-                img.d-block.w-100(src="../assets/slide-3.jpg" alt="Third slide")
-        a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
-            span.carousel-control-prev-icon(aria-hidden="true")
-            span.sr-only Previous
-
-        a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
-            span.carousel-control-next-icon(aria-hidden="true")
-            span.sr-only Next
+block content
+    //- carousel                                 
+    include carousel.pug
+    //- flights
+    .container
+        .row.pt-4
+            .col
+                h1.my-4.text-center Air Ticket
+                p.py-4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora cum? Similique veritatis dicta voluptatem excepturi suscipit voluptates, magni aut quasi ea maxime! Eum iure, quibusdam perferendis, quam dolorum cumque mollitia in optio sequi eos hic vitae porro vel illum assumenda ullam, error officia cupiditate eveniet odit? Quod natus nisi tenetur, officiis consectetur tempora dolore eaque quae odit illum, at nam accusamus aliquid. Ipsam asperiores voluptates nobis animi totam debitis optio omnis, hic illo dolores ex repudiandae at veritatis possimus dignissimos velit ad ab cumque, nam excepturi deserunt repellat eos sed corporis? Dolores laborum velit fugit placeat debitis repudiandae eligendi.
+        .row
+            .col-md-4
+                .mycard.mb-4.bg-white
+                    .info.d-flex.align-items-center.justify-content-center.flex-column
+                    img.img-absolute(src="../assets/vietjet.jpg", alt="")
+            .col-md-4
+                .mycard.mb-4.bg-white
+                    .info.d-flex.align-items-center.justify-content-center.flex-column
+                    img.img-absolute(src="../assets/vnairline.jpg", alt="")
+            .col-md-4
+                .mycard.mb-4.bg-white
+                    .info.d-flex.align-items-center.justify-content-center.flex-column
+                    img.img-absolute(src="../assets/jetstar.png", alt="")
+        .row
+            .col
+                h1 ViGO's Services:
+                p Free consultation for the best flight with the most affordable prices Free ticket delivery inside the city Make reservation and book air tickets via phone, e-mail from 8:00 to 18:30 weekdays (including holidays, New Year’ Eve) Consult participation and benefit from regular customer program of the airlines such as Golden Lotus Plus, Asia Miles, Royal Orchid Plus... Support to change date, flight time, refund ticket quickly and conveniently. Hotline number to book air ticket:
+                p.pb-4 
+                    |Air ticket in Ho Chi Minh City: 0919 754 266 - 0988 531 581 
+                    br 
+                    |Air ticket in Ha Noi: 0915 688 682 - 0163 929 9093
+                    

@@ -17,6 +17,30 @@ $(function(){
         }
     });
 
+    $('#btnStep1').on('click',function(){
+        $('#bookingStep1').css("display","none");
+        $('#bookingStep2').css("display","block");
+        $('.step_1').css({
+            backgroundColor: "#ffffff",
+            color: "#00b9af"
+        });
+        $('.step_2').css({
+            backgroundColor: "#00b9af",
+            color: "#ffffff"
+        });
+    });
+    $('#btnStep2').on('click',function(){
+        $('#bookingStep2').css("display","none");
+        $('#bookingStep3').css("display","block");
+        $('.step_2').css({
+            backgroundColor: "#ffffff",
+            color: "#00b9af"
+        });
+        $('.step_3').css({
+            backgroundColor: "#00b9af",
+            color: "#ffffff"
+        });
+    });
 
     var sync1 = $("#sync1");
     var sync2 = $("#sync2");

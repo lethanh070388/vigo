@@ -1,0 +1,102 @@
+extends layout.pug                                  
+block content
+    //- carousel                                 
+    include carousel.pug
+    .container-fluid
+        .row.py-4
+            .container
+                .row
+                    .col-sm-6.py-4
+                        .row
+                            .col-sm-5
+                                .img-wrapper.bg-blue
+                            .col-sm-7
+                                .blog
+                                    h3 Pomelo sweet pudding: A great treat
+                                    p 
+                                        |by 
+                                        span.author Sophie 
+                                        |at 02:30 20/06/2018
+                    .col-sm-6.py-4
+                        .row
+                            .col-sm-5
+                                .img-wrapper.bg-blue
+                            .col-sm-7
+                                .blog
+                                    h3 Pomelo sweet pudding: A great treat
+                                    p 
+                                        |by 
+                                        span.author Sophie 
+                                        |at 02:30 20/06/2018
+    .container-fluid.bg-grey
+        .row.py-4
+            .container
+                .row
+                    .col-sm-6.py-4
+                        .row
+                            .col-sm-5
+                                .img-wrapper.bg-blue
+                            .col-sm-7
+                                .blog
+                                    h3 Pomelo sweet pudding: A great treat
+                                    p 
+                                        |by 
+                                        span.author Sophie 
+                                        |at 02:30 20/06/2018
+                    .col-sm-6.py-4
+                        .row
+                            .col-sm-5
+                                .img-wrapper.bg-blue
+                            .col-sm-7
+                                .blog
+                                    h3 Pomelo sweet pudding: A great treat
+                                    p 
+                                        |by 
+                                        span.author Sophie 
+                                        |at 02:30 20/06/2018
+    .container-fluid
+        .row.py-4
+            .container
+                .row
+                    .col-sm-6.py-4
+                        .row
+                            .col-sm-5
+                                .img-wrapper.bg-blue
+                            .col-sm-7
+                                .blog
+                                    h3 Pomelo sweet pudding: A great treat
+                                    p 
+                                        |by 
+                                        span.author Sophie 
+                                        |at 02:30 20/06/2018
+                    .col-sm-6.py-4
+                        .row
+                            .col-sm-5
+                                .img-wrapper.bg-blue
+                            .col-sm-7
+                                .blog
+                                    h3 Pomelo sweet pudding: A great treat
+                                    p 
+                                        |by 
+                                        span.author Sophie 
+                                        |at 02:30 20/06/2018
+                    nav.mx-auto.pt-4(aria-label="Pagination")
+                            ul.pagination.mb-0
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous")
+                                        span(aria-hidden="true")
+                                            i.fas.fa-caret-left.pagination_icon.pagination_prev
+                                        span.sr-only Previous
+                                -for(var i=1; i<=5; i++){
+                                    if i==1
+                                        li.page-item
+                                            a.page-link.current(href="#")= i
+                                    else
+                                        li.page-item
+                                            a.page-link(href="#")= i
+                                -}
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Next")
+                                        span(aria-hidden="true")
+                                            i.fas.fa-caret-right.pagination_icon.pagination_next
+                                        span.sr-only Next 

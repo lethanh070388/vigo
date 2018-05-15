@@ -1,0 +1,34 @@
+extends layout.pug
+block content
+    //- contact
+    .container-fluid.bg-blue
+        .container.pb-4
+            .d-flex.row.justify-content-center
+                .col-sm-8
+                    h1.my-4.text-center.text-white You have any question?
+            form(action="#")
+                .row
+                    .col
+                        .form-group
+                            input#inputName.form-control.my-form-control(type="text" placeholder="Your name...")
+                        .form-group
+                            input#inputPhone.form-control.my-form-control(type="text" placeholder="Your phone...")
+                        .form-group
+                            input#inputEmail.form-control.my-form-control(type="email" placeholder="Your email...")
+                        .form-group
+                            textarea#formControlTextarea.form-control(rows="6" placeholder="Your question...")
+                .row
+                    .col.text-center
+                        button.btn.btn-secondary Talk to us
+    .container
+        .row
+            .d-flex.row.justify-content-center
+                .col-sm-8
+                    h1.my-4.text-center.text-white Find us
+        .row
+            .col
+                img.mb-4(src="../assets/map.jpg", alt="")
+    //- end contact
+block script
+    script(src="../js/map.js")
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap")

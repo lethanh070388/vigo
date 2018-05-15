@@ -9,22 +9,22 @@ block content
                         br
                         |Let finish the last step!
         .d-flex.row.justify-content-center
-            .col-sm-8
+            .col-8.mt-4
                 .timeline.my-4
                     .step_1 1
                     .step_2 2
                     .step_3 3
-    .container.bg-blue.my-4
-        .row.p-4
+    #bookingStep1.container.bg-blue.my-4
+        #formStep1.row.p-4
             .col-md-4.d-flex
-                .img-wrapper
+                .img-wrapper.mb-2
             .col-md-8
                 .booking-form
                     h3.text-white Da Nang - Hue - Hoi An
                     .fromto.text-white.py-4 
                         |From 
                         span.from 12/06/2018 
-                        |to
+                        |to 
                         span.to 22/06/2018
                     .passenger_info
                         form(action="#")
@@ -46,16 +46,16 @@ block content
                                 .col No. of Passengers: 
                                 .col 
                                     input#inputPriceAdult.form-control.input-display(type="text" value="235$" disabled)
-                                    label(for="#inpitPriceAdult")
+                                    label(for="#inputPriceAdult")
                                         small Not included Hotel &#38; Flight fee
                                 .col 
                                     input#inputPriceChild.form-control.input-display(type="text" value="235$" disabled)
-                                    label(for="#inpitPriceChild")
-                                        small 80% price for adultNot 
+                                    label(for="#inputPriceChild")
+                                        small 80% price for adult 
                                 .col 
                                     input#inputPriceInfant.form-control.input-display(type="text" value="235$" disabled)
-                                    label(for="#inpitPriceInfant")
-                                        small 20% price for adultNot 
+                                    label(for="#inputPriceInfant")
+                                        small 20% price for adult
                             .row
                                 .col
                                     hr.line-thin-blue
@@ -68,6 +68,145 @@ block content
                                 .col-3
                                 .col-9
                                     .form-group.text-center
-                                        button.btn.btn-secondary.input-display Continue
-                                      
-                            
+                                        button#btnStep1.btn.btn-secondary.input-display Continue
+    #bookingStep2.container.bg-grey.my-4
+        form(action="#")
+            #formStep2.row.p-4
+                .col-md-6.py-4
+                    .form-group
+                        input#inputBookingName.form-control.my-form-control.mb-4(type="text" placeholder="Your full name...")
+                    .form-group
+                        input#inputBookingPassport.form-control.my-form-control.my-4(type="text" placeholder="Your ID/Passport number...")
+                    .form-group
+                        input#inputBookingEmail.form-control.my-form-control.my-4(type="email" placeholder="Your email...")
+                    .form-group
+                        input#inputBookingPhone.form-control.my-form-control.my-4(type="email" placeholder="Your phone number...")
+                .col-md-6.py-4
+                    .row.py-2
+                        .col-sm-6
+                            label(for="#inputGender") Gender
+                            select#inputGender.custom-select.form-control
+                                option(selected) Choose...
+                                option(value="1") Male
+                                option(value="2") Female
+                        .col-sm-6
+                            label(for="#inputCountry") Country
+                            select#inputCountry.custom-select.form-control
+                                option(selected) Choose...
+                                option(value="1") Viet Name
+                                option(value="2") Lao
+                                option(value="3") Campuchia
+                    .row.py-2
+                        .col-sm-4
+                            label(for="#inputMonth") Your birthday
+                            select#inputMonth.custom-select.form-control
+                                option(selected) Month...
+                                option(value="1") January
+                                option(value="2") February
+                                option(value="3") March
+                                option(value="4") April
+                                option(value="5") May
+                                option(value="6") Jun
+                                option(value="7") July
+                                option(value="8") August
+                                option(value="8") September
+                                option(value="10") October
+                                option(value="11") November
+                                option(value="12") December
+                        .col-sm-4
+                            label(for="#inputDay") &nbsp;
+                            select#inputDay.custom-select.form-control
+                                option(selected) Day...
+                                -for(var i=1; i<=31; i++){
+                                    option(value=i)= i
+                                -}
+                        .col-sm-4
+                            label(for="#inputYear") &nbsp;
+                            select#inputYear.custom-select.form-control
+                                option(selected) Year...
+                                -for(var i=2018; i>=1950; i--){
+                                    option(value=i)= i
+                                -}
+                    .row.py-2
+                        .col
+                            .form-group
+                                input#inputBookingName.form-control.my-form-control.mt-3(type="text" placeholder="Promo code...")
+                    .row
+                        .col
+                            .form-group.text-center
+                                button#btnStep2.btn.btn-secondary.input-display Continue
+    #bookingStep3.container.bg-grey.my-4
+        .row.p-4
+            .col
+                h3 Payment method
+                p  Choose 1 of 3 payment method below:
+        .row.p-4
+            .col-sm-4.d-flex.flex-column
+                .payment
+                    .img-wrapper
+                        img.img-absolute(src="../assets/visa.png", alt="")
+                    p.text-center.py-4 After booking and paying successfully, the system will send your e-ticket via mail.
+                        br
+                        | ViGO accepts payment by international credit cards such as Visa, Master and Amex
+
+            .col-sm-4.d-flex.flex-column
+                .payment
+                    .img-wrapper
+                        img.img-absolute(src="../assets/banklist.png", alt="")
+                    p.center.py-4 After successful booking and payment, Saigontourist will send your e-ticket via email. 
+                        br
+                        | ViGO accepts payment by ATM cards issued by banks in Vietnam. Domestic debit card (ATM card): Vietcombank, Vietinbank, DongA, VIBank, Techcombank, HDBank, Tienphong Bank, Military Bank, VietA Bank, Maritime Bank, Eximbank, SHB, Sacombank, NamA Bank ... )
+            .col-sm-4.d-flex.flex-column
+                .payment
+                    .img-wrapper
+                        img.img-absolute(src="../assets/cash.png", alt="")
+                    .text-justify.py-4
+                        .table-row
+                            .table-cell.font-weight-bold.pr-2
+                                |Office:
+                                br
+                                br
+                                |Hotline:
+                                br
+                                br
+                                br
+                                |TIN:
+                            .table-cell
+                                |212 Nguyen Dinh Chieu Street, Ward 6, Dist 3, HCMC. 
+                                br
+                                |1800.1091 - Northern
+                                br
+                                |1800.1093 - Central
+                                br
+                                |1800.1094 - Southern
+                                br
+                                |0901234567
+        .row.p-4
+            .col Payment online Terms and Conditions
+        .row.px-4
+            .col
+        .row.px-4
+            .col
+                .policy
+                    |These terms and conditions are an agreement between Saigontourist Travel Service (STS), you and third party's website for using payment online on website: www.etravelvietnam.com. Please click "agree" toolbar to confirm that you understand and accept the website's terms and condition.
+                    br
+                    br
+                    |1. Meaning: 
+                    br
+                    br
+                    |"Terms and condition" means these terms and conditions between STS, customer and third party's website. "The third party" means STS's partner that support payment online service. "Electronic ticket" (e-ticket) means customer's information and itinerary issued by STS 
+                    br
+                    br
+                    |2. Use of the website 
+                    br
+                    |This Website is operated by STS and this Agreement is governed by the laws of Vietnam .You may only use this website to search information, make legitimate reservations or purchases. You agree that shall not use this website for joint venture, partnership, or employment relationship exists between you and STS and any other purposes, including without limitation, to make any speculative, false or fraudulent reservation or any reservation in anticipation of demand None of The trademarks, logos, service marks and the content or data displayed on this website may be copied, reproduced, republished, uploaded, posted, transmit, distributed, or modified without the express written permission of STS, 
+        .row.p-4
+            .col
+                .form-group
+                    input#chkPolicy(type="checkbox") 
+                    label(for="chkPolicy")   
+                        |I read and agree to the Terms and Conditions
+        .row
+            .col
+                .form-group.text-center
+                    button#btnStep3.btn.btn-secondary.input-display Confirm
