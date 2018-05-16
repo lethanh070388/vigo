@@ -68,6 +68,9 @@ hr.line-thin-blue {
 .c-blue {
   color: #00b9af; }
 
+.c-red {
+  color: red !important; }
+
 b, strong {
   font-weight: 700; }
 
@@ -485,6 +488,9 @@ td {
 
 .blog .author {
   font-weight: bold; }
+
+.guider_avatar {
+  display: block; }
 
 @media (max-width: 767px) {
   html {

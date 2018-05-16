@@ -13,7 +13,7 @@ block content
             .container
                 .row
                     .col-sm-3
-                        .guider_avatar
+                        a.guider_avatar(href="#"  data-toggle="modal" data-target="#myModal")
                     .col-sm-9
                         .guide_info
                             h3 
@@ -40,7 +40,7 @@ block content
             .container
                 .row
                     .col-sm-3
-                        .guider_avatar
+                        a.guider_avatar(href="#"  data-toggle="modal" data-target="#myModal")
                     .col-sm-9
                         .guide_info
                             h3 
@@ -67,7 +67,7 @@ block content
             .container
                 .row
                     .col-sm-3
-                        .guider_avatar
+                        a.guider_avatar(href="#"  data-toggle="modal" data-target="#myModal")
                     .col-sm-9
                         .guide_info
                             h3 
@@ -94,7 +94,7 @@ block content
             .container
                 .row
                     .col-sm-3
-                        .guider_avatar
+                        a.guider_avatar(href="#"  data-toggle="modal" data-target="#myModal")
                     .col-sm-9
                         .guide_info
                             h3 
@@ -136,7 +136,77 @@ block content
                                     span(aria-hidden="true")
                                         i.fas.fa-caret-right.pagination_icon.pagination_next
                                     span.sr-only Next 
-
+    .container
+        //- modal box
+        .row
+            .col
+                #myModal.modal
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                button.close(type="button" data-dismiss="modal") &times;
+                            .modal-body
+                                .container
+                                    .row.product.pt-4
+                                        .col-md-7
+                                            .product_carousel
+                                                #sync1.owl-carousel.owl-theme
+                                                    .item
+                                                        img.img-absolute(src="../assets/product-1-full.jpg", alt="")
+                                                    .item
+                                                        img.img-absolute(src="../assets/product-2-full.jpg", alt="")
+                                                    .item
+                                                        img.img-absolute(src="../assets/product-2-full.jpg", alt="")
+                                                    .item
+                                                        img.img-absolute(src="../assets/product-2-full.jpg", alt="")
+                                                #sync2.owl-carousel.owl-theme
+                                                    .item
+                                                        img.img-absolute(src="../assets/product-1-small.jpg", alt="")
+                                                    .item
+                                                        img.img-absolute(src="../assets/product-2-small.jpg", alt="")
+                                                    .item
+                                                        img.img-absolute(src="../assets/product-2-small.jpg", alt="")
+                                                    .item
+                                                        img.img-absolute(src="../assets/product-2-small.jpg", alt="")
+                                        .col-md-5
+                                            .product_detail
+                                                .guide_info
+                                                    h3 
+                                                        |So Ji Sub, Mr.
+                                                        span.guider_info_short (40 years old, from HCMC) 
+                                                    .row
+                                                        .col.d-flex.flex-row
+                                                            .col-left
+                                                                h3 Exp:
+                                                            .col-right
+                                                                div.table-cell
+                                                                    h3 10 years
+                                                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore magni quae voluptates laboriosam, id rerum voluptatum nostrum natus doloribus!
+                                                    h3 Tours: Son Doong Cave, Da Nang - Hoi An - Hue, Ninh Binh, ... 
+                                                    h3 Vote:
+                                                        span 
+                                                            i.fas.fa-heart.c-blue.mx-1
+                                                            i.fas.fa-heart.c-blue.mx-1
+                                                            i.fas.fa-heart.c-blue.mx-1
+                                                            i.fas.fa-heart.c-blue.mx-1
+                                                            i.far.fa-heart.c-blue.mx-1
+                                                hr.line-blue
+                                                .text-center.py-2
+                                                    a.btn.btn-primary.btn-product(href="booking.html") Contact now
+                                .container.pb-4
+                                    -for(var i=1; i<=4; i++){
+                                        .row
+                                            .col
+                                                .testimonial.clearfix.py-4
+                                                    .testimonial_image
+                                                    .testimonial_inner
+                                                        h3.testimonial_title.pb-4.pt-2 Exactly what i need
+                                                        p.testimonial_content.pt-4 Oh, all right, I am. But if anything happens to me, tell them I died robbing some old man. Calculon is gonna kill us and it's a...  
+                                                        .testimonial_sign 
+                                                            |- 
+                                                            b Sophie 
+                                                            |(HCM, Vietnam) 
+                                    -}
 
             
 

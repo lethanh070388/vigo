@@ -78,6 +78,9 @@ hr.line-thin-blue{
 .c-blue{
     color: $cl-primary;
 }
+.c-red{
+    color: red !important;
+}
 b,strong{
     font-weight: 700;
 }
@@ -645,6 +648,13 @@ td {
     }
 }
 // END BLOGS
+
+// GUIDER
+.guider_avatar{
+    display: block;
+}
+// END GUIDER
+
 // RESPONSIVE
 
 @media (max-width: 767px){
