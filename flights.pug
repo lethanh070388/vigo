@@ -1,7 +1,13 @@
 extends layout.pug
 block content
-    //- carousel                                 
-    include carousel.pug
+    .container-fluid
+        .row.bg-blue.py-4.banner
+            .col.d-flex.justify-content-center.py-4
+                .py-4
+                    h1.text-center.text-white
+                        |Glad you had your trip.  
+                        br
+                        |Let finish the last step!
     //- flights
     .container
         .row.pt-4
@@ -9,18 +15,21 @@ block content
                 h1.my-4.text-center Air Ticket
                 p.py-4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora cum? Similique veritatis dicta voluptatem excepturi suscipit voluptates, magni aut quasi ea maxime! Eum iure, quibusdam perferendis, quam dolorum cumque mollitia in optio sequi eos hic vitae porro vel illum assumenda ullam, error officia cupiditate eveniet odit? Quod natus nisi tenetur, officiis consectetur tempora dolore eaque quae odit illum, at nam accusamus aliquid. Ipsam asperiores voluptates nobis animi totam debitis optio omnis, hic illo dolores ex repudiandae at veritatis possimus dignissimos velit ad ab cumque, nam excepturi deserunt repellat eos sed corporis? Dolores laborum velit fugit placeat debitis repudiandae eligendi.
         .row
-            .col-md-4
-                .mycard.mb-4.bg-white
-                    .info.d-flex.align-items-center.justify-content-center.flex-column
-                    img.img-absolute(src="../assets/vietjet.jpg", alt="")
-            .col-md-4
-                .mycard.mb-4.bg-white
-                    .info.d-flex.align-items-center.justify-content-center.flex-column
-                    img.img-absolute(src="../assets/vnairline.jpg", alt="")
-            .col-md-4
-                .mycard.mb-4.bg-white
-                    .info.d-flex.align-items-center.justify-content-center.flex-column
-                    img.img-absolute(src="../assets/jetstar.png", alt="")
+            .col-sm-4.d-flex.flex-column
+                .payment
+                    .img-wrapper
+                        a(href="#")
+                            img.img-absolute(src="../assets/vietjet.jpg", alt="")
+            .col-sm-4.d-flex.flex-column
+                .payment
+                    .img-wrapper
+                        a(href="#")
+                            img.img-absolute(src="../assets/vnairline.jpg", alt="")
+            .col-sm-4.d-flex.flex-column
+                .payment
+                    .img-wrapper
+                        a(href="#")
+                            img.img-absolute(src="../assets/jetstar.png", alt="")
         .row
             .col
                 h1 ViGO's Services:

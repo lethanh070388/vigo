@@ -44,17 +44,17 @@ html
                         li.nav-item
                             a.nav-link(href="about.html") About
                         li.nav-item.dropdown
-                            a#navbarDropdown.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Service
-                            .dropdown-menu(aria-labelledby="navbarDropdown")
+                            a#navbarDropdown.nav-link.dropdown-toggle(href="tours.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Service
+                            .dropdown-menu.my-0(aria-labelledby="navbarDropdown")
                                 ul.navbar-nav.flex-column
                                     li.nav-item.dropdown-sub
                                         a.dropdown-item(href="tours.html") Tour
                                         .dropdown-submenu
-                                            a.dropdown-item(href="#") Northern
+                                            a.dropdown-item(href="north.html") Northern
                                             .dropdown-divider
-                                            a.dropdown-item(href="#") Central
+                                            a.dropdown-item(href="central.html") Central
                                             .dropdown-divider
-                                            a.dropdown-item(href="#") Southern
+                                            a.dropdown-item(href="south.html") Southern
                                     .dropdown-divider
                                     li.nav-item.dropdown-sub
                                         a.dropdown-item(href="services.html") Service
@@ -70,6 +70,9 @@ html
                             a.nav-link(href="blogs.html") Blog
                         li.nav-item
                             a.nav-link(href="contact.html") Contact
+            a.to_top(href="#top")
+                img(src="../assets/symbol_small.png", alt="")
+
         //- end navigation bar
 
         block content
@@ -103,7 +106,7 @@ html
                                     td
                                         b TIN:
                                     td 0901234567
-                    .col-md-4.d-flex.flex-column.justify-content-between
+                    .col-md-4.d-flex.flex-column
                         h1.my-4.text-white Contact info
                         .social
                             .social_heading.text-white.mb-2
@@ -112,11 +115,11 @@ html
                                     br
                                     |Recruitments
                             .social_icons.pb-2
-                                i.fab.fa-facebook-f.fa-2x
-                                i.fab.fa-instagram.fa-2x
-                                i.fab.fa-skype.fa-2x
-                                i.fab.fa-youtube.fa-2x
-                    .col-md-4.d-flex.flex-column.justify-content-between
+                                i.fab.fa-facebook-f.fa-1x
+                                i.fab.fa-instagram.fa-1x
+                                i.fab.fa-skype.fa-1x
+                                i.fab.fa-youtube.fa-1x
+                    .col-md-4.d-flex.flex-column
                         h1.my-4.text-white Get info
                         .form-info.pb-2
                             form(action="#")
@@ -133,6 +136,7 @@ html
                 .col
                     .text-center.py-2 &#64; Copyright 2017 ViGO. All rights reserved.
 
+        
 
         script(src="../js/jquery.js")
         script(src="../js/popper.js")

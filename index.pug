@@ -14,6 +14,7 @@ block content
             each n in places
                 .col-sm-6.col-md-3
                     .mycard.mb-4
+                        img.img-absolute(src="../assets/test-1.jpg", alt="")
                         .info.d-flex.align-items-center.justify-content-center.flex-column
                             h3= n.name
                             button.btn.btn-primary.btn-lg.btn-price(type="button" data-toggle="modal" data-target="#myModal")= n.price + "$"
@@ -95,7 +96,7 @@ block content
             .col-sm-8
                 h1.my-4.text-center Hot Promotion
                 p.mb-4.text-center Check out the best places &#38; events in the city. Each one is worth of visiting. Experience which you never forget.
-        .row
+        .row.pb-4
             .col-lg-8
                 .row
                     .col
@@ -114,6 +115,7 @@ block content
                                     |DALAT BY AIR (3D2N)
                                     br
                                     |10% OFF
+                                button.btn.btn-primary.btn-lg.btn-price(type="button") 235$
                     .col-sm-6
                         .mycard.pb-50.mb-4
                             .info.d-flex.align-items-center.justify-content-center.flex-column
@@ -121,6 +123,7 @@ block content
                                     |HUE FESTIVAL SPECIALS
                                     br
                                     |15% OFF10
+                                button.btn.btn-primary.btn-lg.btn-price(type="button") 235$
             .col-lg-4.d-flex
                 .mycard.mb-4.pb-sm-25.pb-lg-100
                     .info.d-flex.align-items-center.justify-content-center.flex-column
@@ -130,16 +133,18 @@ block content
                             |GET 1 FREE TICKET 
                             br
                             |TO THE RAINBOW SHOW
+                        button.btn.btn-primary.btn-lg.btn-price(type="button") 235$
     //- end promotion
 
     //- testimonial
     .container-fluid.bg-grey
-        .container.pb-4
+        .container.py-4
             .row
                 -for(var i=1; i<=4; i++){
                     .col-md-6
                         .testimonial.clearfix.py-4
                             .testimonial_image
+                                img.img-absolute(src="../assets/test-2.jpg", alt="")
                             .testimonial_inner
                                 h3.testimonial_title.pb-4.pt-2 Exactly what i need
                                 p.testimonial_content.pt-4 Oh, all right, I am. But if anything happens to me, tell them I died robbing some old man. Calculon is gonna kill us and it's a...  
@@ -148,10 +153,33 @@ block content
                                     b Sophie 
                                     |(HCM, Vietnam) 
                 -}
-            .row
-                .col.text-center
-                    button.btn.btn-secondary See more
+            
     //- end testimonial
+
+    //- partner
+    .container-fluid
+        .d-flex.row.justify-content-center
+            .col-sm-8
+                h1.my-4.text-center Our partner
+        .row.pb-2
+            .col.py-4
+                .owl-carousel.owl-theme
+                    .item
+                        .img-wrapper
+                            img.img-absolute(src="../assets/vnairline.jpg", alt="")
+                    .item
+                        .img-wrapper
+                            img.img-absolute(src="../assets/vnairline.jpg", alt="")
+                    .item
+                        .img-wrapper
+                            img.img-absolute(src="../assets/vnairline.jpg", alt="")
+                    .item
+                        .img-wrapper
+                            img.img-absolute(src="../assets/vnairline.jpg", alt="")
+                    .item
+                        .img-wrapper
+                            img.img-absolute(src="../assets/vnairline.jpg", alt="")
+    //-end partner
 
     //- contact
     .container-fluid.bg-blue
@@ -171,7 +199,7 @@ block content
                     .col-sm-6
                         .form-group
                             textarea#formControlTextarea.form-control(rows="6" placeholder="Your question...")
-                .row
+                .row.py-2
                     .col.text-center
                         button.btn.btn-secondary Talk to us
     //- end contact

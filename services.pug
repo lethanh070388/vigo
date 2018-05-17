@@ -1,7 +1,13 @@
 extends layout.pug
 block content
-    //- carousel                                 
-    include carousel.pug
+    .container-fluid
+        .row.bg-blue.py-4.banner
+            .col.d-flex.justify-content-center.py-4
+                .py-4
+                    h1.text-center.text-white
+                        |Glad you had your trip.  
+                        br
+                        |Let finish the last step!
     //- services
     .container
         .row.pt-4
@@ -14,8 +20,8 @@ block content
                 .row
                     .col-sm-3
                         a.guider_avatar(href="#"  data-toggle="modal" data-target="#myModal")
-                    .col-sm-9
-                        .guide_info
+                    .col-sm-9.d-flex
+                        .guide_info.d-flex.flex-column.justify-content-center
                             h3 
                                 |So Ji Sub, Mr.
                                 span.guider_info_short (40 years old, from HCMC) 
@@ -41,8 +47,8 @@ block content
                 .row
                     .col-sm-3
                         a.guider_avatar(href="#"  data-toggle="modal" data-target="#myModal")
-                    .col-sm-9
-                        .guide_info
+                    .col-sm-9.d-flex
+                        .guide_info.d-flex.flex-column.justify-content-center
                             h3 
                                 |So Ji Sub, Mr.
                                 span.guider_info_short (40 years old, from HCMC) 
@@ -68,8 +74,8 @@ block content
                 .row
                     .col-sm-3
                         a.guider_avatar(href="#"  data-toggle="modal" data-target="#myModal")
-                    .col-sm-9
-                        .guide_info
+                    .col-sm-9.d-flex
+                        .guide_info.d-flex.flex-column.justify-content-center
                             h3 
                                 |So Ji Sub, Mr.
                                 span.guider_info_short (40 years old, from HCMC) 
@@ -95,8 +101,8 @@ block content
                 .row
                     .col-sm-3
                         a.guider_avatar(href="#"  data-toggle="modal" data-target="#myModal")
-                    .col-sm-9
-                        .guide_info
+                    .col-sm-9.d-flex
+                        .guide_info.d-flex.flex-column.justify-content-center
                             h3 
                                 |So Ji Sub, Mr.
                                 span.guider_info_short (40 years old, from HCMC) 

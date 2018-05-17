@@ -17,6 +17,36 @@ $(function(){
         }
     });
 
+    /******************************
+      BOTTOM SCROLL TOP BUTTON
+    ******************************/
+
+    // declare variable
+    var scrollTop = $(".to_top");
+
+    $(window).scroll(function() {
+        // declare variable
+        var topPos = $(this).scrollTop();
+
+        // if user scrolls down - show scroll to top button
+        if (topPos > 100) {
+        $(scrollTop).css("opacity", "1");
+
+        } else {
+        $(scrollTop).css("opacity", "0");
+        }
+
+    }); // scroll END
+
+    //Click event to scroll to top
+    $(scrollTop).click(function() {
+        $('html, body').animate({
+        scrollTop: 0
+        }, 800);
+        return false;
+
+    }); // click() scroll top EMD
+
     $('#btnStep1').on('click',function(){
         $('#bookingStep1').css("display","none");
         $('#bookingStep2').css("display","block");
@@ -118,4 +148,25 @@ $(function(){
         var number = $(this).index();
         sync1.data('owl.carousel').to(number, 300, true);
     });
+
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 50,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:5
+            }
+        }
+    })
 });
