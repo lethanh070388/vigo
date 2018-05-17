@@ -15,8 +15,8 @@ block content
                 .col-sm-8
                     h1.my-4.text-center.text-white You have any question?
             form(action="#")
-                .row
-                    .col
+                .row.d-flex.row.justify-content-center
+                    .col-sm-8
                         .form-group
                             input#inputName.form-control.my-form-control(type="text" placeholder="Your name...")
                         .form-group
@@ -29,12 +29,11 @@ block content
                     .col.text-center
                         button.btn.btn-secondary Talk to us
     .container
-        .row
-            .d-flex.row.justify-content-center
-                .col-sm-8
-                    h1.my-4.text-center.text-white Find us
-        .row
-            .col
+        .d-flex.row.justify-content-center
+            .col-sm-8
+                h1.my-4.text-center Find us
+        .d-flex.row.justify-content-center
+            .col-sm-8
                 img.mb-4(src="../assets/map.jpg", alt="")
     //- end contact
 block script

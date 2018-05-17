@@ -357,10 +357,14 @@ td {
     font-size: 16px;
     font-weight: 300; }
 
+.product_detail {
+  flex-grow: 1; }
+
 #sync1 .item {
   background: #00b9af;
   padding-bottom: 48%;
   margin: 10px;
+  margin-top: 0;
   color: #fff;
   text-align: center;
   position: relative;
