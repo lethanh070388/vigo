@@ -3,7 +3,7 @@ body {
   font-family: Roboto, sans-serif;
   color: #31302f;
   font-weight: 300;
-  font-size: 16px; }
+  font-size: 15px; }
 
 .clearfix:after {
   content: "";
@@ -15,13 +15,13 @@ img {
   width: 100%; }
 
 h1 {
-  font-size: 32px; }
+  font-size: 30px; }
 
 h2 {
-  font-size: 27.2px; }
+  font-size: 25.5px; }
 
 h3 {
-  font-size: 20.8px;
+  font-size: 19.5px;
   font-weight: 500; }
 
 p {
@@ -188,7 +188,8 @@ td {
   color: #00b9af; }
 .navbar-light .navbar-nav .nav-link {
   color: #31302f;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  font-size: 16px; }
   .navbar-light .navbar-nav .nav-link:hover {
     color: #00b9af; }
 
@@ -274,6 +275,20 @@ td {
 @media (min-width: 768px) {
   .mycard {
     padding-bottom: 70%; } }
+@media (max-width: 768px) {
+  .mycard {
+    background-color: #fff; }
+    .mycard:hover {
+      background-color: #fff; }
+    .mycard .img-absolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: auto;
+      width: 100%; } }
 .event .event-date {
   min-width: 60px;
   border-radius: 5px;
@@ -283,9 +298,9 @@ td {
     display: block;
     color: white; }
   .event .event-date_day {
-    font-size: 26px; }
+    font-size: 22px; }
   .event .event-date_month {
-    font-size: 20px; }
+    font-size: 18px; }
 .event .event-content {
   display: table-cell;
   padding-left: 10px; }
@@ -354,7 +369,7 @@ td {
 .guider_info {
   flex-grow: 1; }
   .guider_info_short {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300; }
 
 .product_detail {
@@ -421,7 +436,7 @@ td {
 .product_notes {
   display: inline-block;
   font-size: 13px;
-  vertical-align: middle; }
+  vertical-align: top; }
 
 .timeline .step_1,
 .timeline .step_2,
@@ -545,19 +560,19 @@ td {
 
 @media (max-width: 767px) {
   html {
-    font-size: 12.8px; }
+    font-size: 12px; }
 
   body {
-    font-size: 12.8px; }
+    font-size: 12px; }
 
   h1 {
-    font-size: 25.6px; }
+    font-size: 24px; }
 
   h2 {
-    font-size: 21.76px; }
+    font-size: 20.4px; }
 
   h3 {
-    font-size: 16.64px; }
+    font-size: 15.6px; }
 
   small {
     font-size: 11.7px; }
@@ -568,15 +583,18 @@ td {
   .testimonial_sign {
     font-size: 10.4px; }
 
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 14.4px; }
+
   .event .event-date_day {
-    font-size: 20.8px; }
+    font-size: 17.6px; }
   .event .event-date_month {
-    font-size: 16px; }
+    font-size: 14.4px; }
   .event .event-content .event-author {
     font-size: 11.7px; }
 
   .guider_info_short {
-    font-size: 12.8px; }
+    font-size: 12px; }
 
   .product_notes {
     font-size: 10.4px; } }
@@ -604,7 +622,7 @@ td {
     color: #00b9af;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 1rem 4rem;
-    font-size: 26px;
+    font-size: 22px;
     border-radius: 15px;
     z-index: 5; }
     .loading .btn-enter:hover {

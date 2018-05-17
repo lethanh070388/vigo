@@ -223,6 +223,7 @@ td {
         .nav-link{
             color: $cl-black;
             text-transform: capitalize;
+            font-size: $font-menu;
             &:hover{
                 color: $cl-primary;
             }
@@ -341,6 +342,24 @@ td {
 @media (min-width: 768px){
     .mycard{
         padding-bottom: 70%;
+    }
+}
+@media (max-width: 768px){
+    .mycard{
+        background-color: #fff;
+        &:hover{
+            background-color: #fff;
+        }
+        .img-absolute{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: auto;
+            width: 100%;
+        }
     }
 }
 // END PLACES
@@ -562,7 +581,7 @@ td {
 .product_notes{
     display: inline-block;
     font-size: $font-small;
-    vertical-align: middle;
+    vertical-align: top;
 }
 // END MODAL
 
@@ -745,6 +764,13 @@ td {
         &_sign{
             font-size: $font-small*0.8;
         }
+    }
+    .navbar-light{
+        .navbar-nav{
+            .nav-link{
+                font-size: $font-menu*0.9;
+            }
+        }    
     }
     .event{
         .event-date{
